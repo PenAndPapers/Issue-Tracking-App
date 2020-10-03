@@ -6,7 +6,9 @@ use App\Role;
 use Faker\Generator as Faker;
 
 $factory->define(Role::class, function (Faker $faker) {
-    return [
-        //
-    ];
+    $roles = ['superadmin', 'admin', 'manager', 'developer', 'designer', 'quality assurance', 'client'];
+    
+    foreach($roles as $role) {
+        return ['name' => $role];
+    }
 });
